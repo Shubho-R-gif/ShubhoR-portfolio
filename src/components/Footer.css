@@ -1,0 +1,88 @@
+.Footer-section {
+  background-color: #261454e5;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 1px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-heading img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.footer-heading h2 {
+  margin: 4px;
+  margin-left: 50px; /* Adjust to align with the image */
+  font-size: 24px;
+  font-weight: 500;
+  word-spacing: 4px;
+  letter-spacing: 4px;
+  border-right: 1px solid white;
+  padding: 10px 20px;
+}
+
+.footer-description p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.footer-social a {
+  margin: 0 15px;
+  color: #000000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-social a:nth-child(1) {
+  color: rgb(0, 83, 208);
+}
+
+.footer-social a:hover {
+  color: #ffffff; /* Twitter's primary color */
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  font-weight: 550;
+  color: #ffffff97;
+  word-spacing: 4px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 360px) {
+    .footer-description p {
+    color: #774894;
+  }
+}

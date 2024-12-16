@@ -1,0 +1,1435 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/*article-classes*/
+/* Container for the Article Section */
+.intro-container {
+  margin-top: 72px;
+  margin-bottom: -1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 891px;
+  background: linear-gradient(
+    45deg,
+    rgb(248, 1, 1),
+    rgba(4, 4, 213, 0.805),
+    indigo,
+    rgb(207, 9, 167)
+  );
+  background-size: 400% 400%;
+  animation: gradientBackg 6s ease infinite;
+}
+
+/* Intro Text */
+.intro-text {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-left: 40px;
+  padding: 20px;
+  word-spacing: 10px;
+  margin-top: 150px;
+}
+
+.name {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #b219c6;
+  word-spacing: -2px;
+  letter-spacing: 5px;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #b219c6;
+  transform: translateY(8px);
+  animation: typing 3.5s linear infinite, blink 0.5s step-end infinite;
+  /*    animation: typing 3.5s  steps(12) infinite, blink 0.5s step-end infinite; */
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #000000;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-left: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease-out, transform 1s ease-out;
+}
+.title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Description and Passion */
+.description,
+.passion {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  max-width: 600px;
+  border: 1px solid;
+  display: inline-block;
+  padding: 10px;
+  cursor: default;
+  overflow: hidden; /* Prevent pseudo-element from leaking out */
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease-out, transform 1s ease-out;
+}
+
+.description::before,
+.passion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #13131370; /* Slide-in background color */
+  transition: left 0.4s;
+  z-index: -1; /* Ensure it's behind the text */
+}
+
+.description:hover::before,
+.passion:hover::before {
+  left: 0;
+}
+
+.description:hover,
+.passion:hover {
+  color: #fff; /* Change text color on hover */
+  border-color: black; /* Change border color on hover */
+}
+.description.visible,
+.passion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Call to Action */
+.cta {
+  /*  position: relative;  */ /* Ensure absolute children are positioned relative to this element */
+  font-size: 1.1rem;
+  font-weight: 450;
+  margin-top: 10px;
+  margin-left: 40px;
+  color: #845392ac;
+  border: 1px solid;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: default;
+  overflow: hidden; /* Prevent pseudo-element from leaking out */
+  transition: color 0.4s, border-color 0.4s;
+}
+.cta a {
+  text-decoration: none;
+  color: inherit;
+}
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 7%;
+  left: -100%;
+  width: 100%;
+  height: 904px;
+  transform: translateY(-3px);
+  background-color: #6518c3; /* Slide-in background color */
+  /*  background-color: #000000; */
+  transition: left 1.8s ease;
+  z-index: -1; /* Ensure it's behind the text */
+}
+
+.cta:hover::before {
+  left: 0; /* Slide the background in */
+}
+
+.cta a:hover {
+  color: #fff; /* Change text color on hover */
+  text-decoration: none;
+}
+.cta:hover {
+  color: #fff; /* Change text color on hover */
+  border-color: black; /* Change border color on hover */
+}
+/* Resume Button */
+.resume-button {
+  background-color: #9f01c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.4s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    red,
+    blue,
+    green,
+    rgb(255, 64, 0)
+  );
+  display: inline-block;
+  background-size: 500% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+.resume-button:active {
+  transform: scale(0.8);
+}
+/*figure-classes*/
+figure .player {
+  position: absolute;
+  top: 56%;
+  left: 82%;
+  width: 200px;
+  height: 200px;
+  object-fit: scale-down;
+  /*   border-top: 1px solid; */
+  /*   border-bottom: 1px solid; */
+  transform: rotateY(180deg) rotateZ(-16deg);
+}
+figure .enemy {
+  position: absolute;
+  top: 14%;
+  left: 21px;
+  width: 260px;
+  height: 200px;
+  object-fit: scale-down;
+  /* border-top: 1px solid; */
+  /*   border-bottom: 1px solid; */
+  transform: rotateZ(16deg);
+  animation: movement 2s ease 4s infinite;
+}
+/*Section-classes*/
+.Skills-container {
+  min-height: 780px; /* Set a height that allows scrolling */
+  margin-top: -35px;
+  background: url("../assets/skills-backg.jpg") fixed center no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.Skills-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  word-spacing: 10px;
+  letter-spacing: 2px;
+  transform: translateY(40px);
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 16px rgb(255, 255, 255));
+}
+
+/* Custom AOS styles */
+[data-aos="slide-up"] {
+  transform: translateY(200px); /* Starting position */
+  opacity: 0; /* Start invisible */
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out; /* Animation duration and easing */
+}
+
+[data-aos="slide-up"].aos-animate {
+  transform: translateY(50px); /* Final position when animated */
+  opacity: 1; /* Fully visible */
+}
+/* Remove the transform for slide animations */
+[data-aos^="slide"][data-aos^="slide"].aos-animate {
+  transform: translateY(50px); /* Disable transform */
+}
+
+.Skills-container ul {
+  /*   background-color: red; */
+  padding: 10px 20px;
+  display: flex;
+}
+
+.Skills-item {
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1rem;
+  max-width: 400px;
+  max-height: 400px;
+  margin-top: 140px;
+  margin-left: 20px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  transition: transform 0.3s; /* Smooth animation */
+}
+
+.Skills-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.Skills-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(15, 4, 27, 0.134);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s, opacity 0.4s;
+  opacity: 0;
+  z-index: 1; /* Ensure it's above the item content */
+}
+
+.Skills-item:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 0; /* Ensures it covers the background */
+}
+
+.Skill-icon {
+  font-size: 2rem;
+  color: #ff5722;
+  margin-right: 1rem;
+  margin-bottom: 10px;
+}
+
+.Skill-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Skill-name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.Skill-description {
+  margin: 0.8rem 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #eee5e59d;
+}
+
+.Skill-level {
+  font-size: 0.9rem;
+  font-weight: 400;
+  /*   margin: auto; */
+}
+
+/* Container Styles */
+.Projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: unset;
+  padding: 50px 20px;
+  min-height: 100vh;
+  gap: 10px; /* Space between heading and cards */
+  position: relative; /* For background effects */
+  overflow: hidden;
+}
+/* Background Div */
+.Projects-bg {
+  position: absolute;
+  width: 1000px;
+  height: 800px;
+  background: linear-gradient(
+    to left,
+    rgb(85, 0, 223),
+    #ff5100
+  ); /*  rgb(0, 130, 0) */
+  filter: blur(250px); /* Apply blur effect */
+  z-index: 1; /* Behind the heading */
+  top: 50%; /* Center the background */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust centering */
+}
+
+.Projects-bg-1,
+.Projects-bg-2 {
+  display: inline-block;
+  position: absolute;
+  font-size: 30rem;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #53535352;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+}
+
+.Projects-bg-2 {
+  top: 10%;
+  left: 70%;
+}
+
+/* Heading Styles */
+.Projects-heading {
+  font-size: 2.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  word-spacing: 2px;
+  letter-spacing: 4px;
+  display: inline-block;
+  background-image: linear-gradient(
+    to left,
+    rgb(117, 6, 121),
+    rgb(38, 114, 8),
+    rgba(58, 60, 197, 0.555),
+    rgba(153, 2, 65, 0.884)
+  );
+  background-size: 300% auto;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 6s linear infinite;
+  margin-top: 0;
+  text-align: center;
+}
+
+.Projects-heading::after {
+  content: "";
+  display: block;
+  width: 450px;
+  height: 2px;
+  background-color: #918899;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+/* Project Grid */
+.Projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between cards */
+  width: 100%;
+  max-width: 1100px; /* Limit max width of the grid */
+  z-index: 1;
+}
+
+/* Card Styling */
+.Project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.61); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 350px; /* Fixed height for consistent card sizes */
+}
+.Project-card.row-reverse {
+  flex-direction: row-reverse; /* Swap layout for alternating design */
+}
+
+/* Hover Effects for Cards */
+.Project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
+}
+/* Image Styling */
+.Project-image {
+  width: 50%; /* Half of the card width */
+  height: 100%; /* Full card height */
+  object-fit: cover;
+  filter: brightness(80%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Project-card:hover .Project-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  filter: brightness(100%);
+}
+
+/* Text Section */
+.Project-details {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff; /* Contrast background for the text */
+  text-align: left;
+}
+
+.Project-title {
+  font-size: 2rem;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 550;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Subtle glow effect */
+}
+
+.Project-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.Project-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to right, #630dd3, #010208);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.Project-button:hover {
+  background: linear-gradient(
+    to right,
+    #010208,
+    #630dd3
+  ); /* Reverse gradient */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+/*resume gradient */
+@keyframes gradientAnimation {
+  to {
+    background-position: 250% center;
+  }
+}
+
+/* Smooth gradient loop */
+@keyframes gradientBackg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Typewriter Animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 16ch;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*enemy movement*/
+@keyframes movement {
+  to {
+    transform: rotateZ(14deg) translateX(60%);
+  }
+}
+@media screen and (max-width: 1024px) {
+  figure .enemy {
+    top: 24%;
+    left: 18px;
+    width: 180px;
+    height: 100px;
+    object-fit: scale-down;
+    transform: rotateZ(20deg);
+  }
+  figure .player {
+    top: 72%;
+    left: 80%;
+    width: 135px;
+    height: 90px;
+    transform: rotateY(180deg) rotateZ(-30deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro-container {
+    margin-top: 71px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-top: 14px;
+  }
+  figure .enemy {
+    top: 20%;
+    left: 20px;
+    width: 180px;
+    height: 100px;
+    object-fit: scale-down;
+    transform: rotateZ(20deg);
+  }
+  figure .player {
+    top: 63%;
+    left: 76%;
+    width: 135px;
+    height: 90px;
+    transform: rotateY(180deg) rotateZ(-34deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 640px;
+    font-size: 1.2rem;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 320px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 811px;
+  }
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -20px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .Projects-bg-1,
+  .Projects-bg-2 {
+    left: -10%;
+  }
+  .Projects-bg-2 {
+    left: 32%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .intro-container {
+    margin-top: 71px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  figure .enemy {
+    top: 74%;
+    left: 0px;
+    width: 125px;
+    height: 70px;
+    object-fit: cover;
+  }
+  figure .player {
+    top: 85%;
+    left: 68%;
+    width: 110px;
+    height: 80px;
+    transform: rotateY(180deg) rotateZ(-25deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 360px;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 320px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 811px;
+  }
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -20px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  /* Container Adjustments */
+  .Projects-container {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  /* Background */
+  .Projects-bg {
+    width: 700px;
+    height: 500px;
+    filter: blur(200px);
+  }
+
+  .Projects-bg-1,
+  .Projects-bg-2 {
+    left: -10%;
+  }
+  .Projects-bg-2 {
+    left: -11%;
+  }
+
+  /* Heading Styles */
+  .Projects-heading {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+
+  .Projects-heading::after {
+    width: 250px; /* Shorter underline */
+  }
+
+  /* Grid Adjustments */
+  .Projects-grid {
+    gap: 20px;
+  }
+
+  /* Card Adjustments */
+  .Project-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+  }
+
+  .Project-card.row-reverse {
+    flex-direction: column; /* Same for row-reverse */
+  }
+
+  /* Image Styling */
+  .Project-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+  }
+
+  /* Text Section */
+  .Project-details {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 384px) {
+  .intro-container {
+    margin-top: 71px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  figure .enemy {
+    top: 94%;
+    left: 0px;
+    width: 125px;
+    height: 70px;
+    object-fit: cover;
+  }
+  figure .player {
+    top: 105%;
+    left: 60%;
+    width: 110px;
+    height: 80px;
+    transform: rotateY(180deg) rotateZ(-25deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 306px;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 260px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 811px;
+  }
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -20px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  /* Container Adjustments */
+  .Projects-container {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  /* Background */
+  .Projects-bg {
+    width: 700px;
+    height: 500px;
+    filter: blur(200px);
+  }
+
+  /* Heading Styles */
+  .Projects-heading {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+
+  .Projects-heading::after {
+    width: 250px; /* Shorter underline */
+  }
+
+  /* Grid Adjustments */
+  .Projects-grid {
+    gap: 20px;
+  }
+
+  /* Card Adjustments */
+  .Project-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+  }
+
+  .Project-card.row-reverse {
+    flex-direction: column; /* Same for row-reverse */
+  }
+
+  /* Image Styling */
+  .Project-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+  }
+
+  /* Text Section */
+  .Project-details {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .intro-container {
+    margin-top: 71px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  figure .enemy {
+    top: 74%;
+    left: 0px;
+    width: 125px;
+    height: 70px;
+    object-fit: cover;
+  }
+  figure .player {
+    top: 82%;
+    left: 60%;
+    width: 110px;
+    height: 80px;
+    transform: rotateY(180deg) rotateZ(-25deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 306px;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 260px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 811px;
+  }
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -20px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  /* Container Adjustments */
+  .Projects-container {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  /* Background */
+  .Projects-bg {
+    width: 700px;
+    height: 500px;
+    filter: blur(200px);
+  }
+  .Projects-bg-1,
+  .Projects-bg-2 {
+    left: -10%;
+  }
+  .Projects-bg-2 {
+    left: -11%;
+  }
+  /* Heading Styles */
+  .Projects-heading {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+
+  .Projects-heading::after {
+    width: 250px; /* Shorter underline */
+  }
+
+  /* Grid Adjustments */
+  .Projects-grid {
+    gap: 20px;
+  }
+
+  /* Card Adjustments */
+  .Project-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+  }
+
+  .Project-card.row-reverse {
+    flex-direction: column; /* Same for row-reverse */
+  }
+
+  /* Image Styling */
+  .Project-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+  }
+
+  /* Text Section */
+  .Project-details {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .intro-container {
+    margin-top: 70px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  figure .enemy {
+    top: 95%;
+    left: 0px;
+    width: 125px;
+    height: 70px;
+    object-fit: cover;
+  }
+  figure .player {
+    top: 110%;
+    left: 66%;
+    width: 110px;
+    height: 80px;
+    transform: rotateY(180deg) rotateZ(-25deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 306px;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 260px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 824px;
+  }
+
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -21px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  /* Container Adjustments */
+  .Projects-container {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+
+  /* Background */
+  .Projects-bg {
+    width: 700px;
+    height: 500px;
+    filter: blur(200px);
+  }
+
+  /* Heading Styles */
+  .Projects-heading {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+
+  .Projects-heading::after {
+    width: 250px; /* Shorter underline */
+  }
+
+  /* Grid Adjustments */
+  .Projects-grid {
+    gap: 20px;
+  }
+
+  /* Card Adjustments */
+  .Project-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+  }
+
+  .Project-card.row-reverse {
+    flex-direction: column; /* Same for row-reverse */
+  }
+
+  /* Image Styling */
+  .Project-image {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+  }
+
+  /* Text Section */
+  .Project-details {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+  }
+  .Projects-bg-1,
+  .Projects-bg-2 {
+    left: -50px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .intro-container {
+    margin-top: 71px;
+    height: 791px;
+  }
+  .intro-text {
+    font-size: 2.1rem;
+    margin-left: 0px;
+    padding: 10px;
+    padding: 0px;
+    margin-top: 85px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+  figure .enemy {
+    top: 76%;
+    left: 0px;
+    width: 125px;
+    height: 70px;
+    object-fit: cover;
+  }
+  figure .player {
+    top: 86%;
+    left: 60%;
+    width: 110px;
+    height: 80px;
+    transform: rotateY(180deg) rotateZ(-25deg);
+  }
+  .description,
+  .passion {
+    font-weight: 400;
+    margin-left: 0px;
+    max-width: 265px;
+  }
+  .cta {
+    margin-left: -6px;
+    padding: 5px 10px;
+    max-width: 230px;
+    text-align: center;
+  }
+  .cta::before {
+    height: 811px;
+  }
+  .resume-button {
+    font-size: 1rem;
+  }
+  .Skills-container {
+    margin-top: -20px;
+  }
+  .Skills-heading {
+    font-size: 22px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-bottom: 70px;
+  }
+  .Skills-container ul {
+    flex-direction: column; /* Stack items vertically */
+    padding: 0;
+    margin: 0;
+  }
+
+  .Skills-item {
+    max-width: 90%; /* Slight padding from edges */
+    margin: 10px auto; /* Center items */
+    padding: 10px;
+    font-size: 0.8rem; /* Smaller font size for readability */
+    border-radius: 8px; /* Slightly smaller border radius */
+  }
+
+  .Skill-icon {
+    font-size: 1.2rem; /* Reduce size */
+    margin-right: 0.5rem;
+  }
+
+  .Skill-name {
+    font-size: 1rem;
+    text-align: center; /* Align text for a compact layout */
+  }
+
+  .Skill-description {
+    font-size: 0.9rem;
+    line-height: 1.1; /* Tighter line spacing */
+    color: #ddd;
+  }
+
+  .Skill-level {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .Projects-bg-1,
+  .Projects-bg-2 {
+    left: -50px;
+  }
+}

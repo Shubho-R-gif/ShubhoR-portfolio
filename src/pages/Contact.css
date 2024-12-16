@@ -1,0 +1,152 @@
+/* Main Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  height: 580px;
+  margin: 128px auto 75px auto;
+  padding: 20px;
+  background-color: rgba(203, 200, 200, 0.522);
+  border-radius: 4px;
+}
+
+/* Title */
+.contact-container__title {
+  font-size: 2.2rem;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* General container for all cards */
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Individual card styles */
+.contact-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Text and link styles */
+.contact-card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+}
+
+.contact-card a:hover {
+  color: #0056a8;
+  text-decoration: underline;
+}
+
+/* Responsive styles specifically for all screens */
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    max-width: 85%;
+    /* height: auto; */
+    margin: 130px auto 100px auto;
+    padding: 35px;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .contact-container__title {
+    font-size: 1.8rem; /* Smaller font size for readability */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+}
+@media screen and (max-width: 425px) {
+  .contact-container {
+    max-width: 83%;
+    height: auto;
+    margin: 130px auto 77px auto;
+    padding: 25px;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .contact-container__title {
+    font-size: 1.5rem; /* Smaller font size for readability */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-container {
+    max-width: 83%;
+    height: auto;
+    margin: 130px auto 77px auto;
+    padding: 25px;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .contact-container__title {
+    font-size: 1.5rem; /* Smaller font size for readability */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+}
+@media screen and (max-width: 360px) {
+  .contact-container {
+    max-width: 83%;
+    height: auto;
+    margin: 130px auto 77px auto;
+    padding: 25px;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .contact-container__title {
+    font-size: 1.5rem; /* Smaller font size for readability */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact-container {
+    max-width: 83%;
+    height: auto;
+    margin: 130px auto 77px auto;
+    padding: 25px;
+    border-radius: 6px;
+  }
+
+  /* Title */
+  .contact-container__title {
+    font-size: 1.5rem; /* Smaller font size for readability */
+    margin-bottom: 15px;
+    text-align: center; /* Center the title */
+  }
+  .contact-card {
+    width: 245px;
+  }
+}

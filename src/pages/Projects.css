@@ -1,0 +1,599 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Iceland&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Itim&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* General styles for the main container */
+.Projects-main {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+
+/* Styling for the header container */
+.Heading-container {
+  text-align: center;
+  min-height: 360px;
+  margin-top: 65px;
+  border-bottom: 1px solid rgba(194, 194, 194, 0.616);
+}
+
+/* Background Div */
+.Projects-bg1 {
+  position: absolute;
+  width: 1000px;
+  height: 300px;
+  background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+  filter: blur(200px); /* Apply blur effect */
+  z-index: -1; /* Behind the heading */
+  top: 25%; /* Center the background */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust centering */
+}
+
+/* Styling for the heading */
+.Heading-container h1 {
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4.5rem;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 100px;
+  margin-bottom: 6px;
+  background: linear-gradient(
+    90deg,
+    #1705be 0%,
+    #ae0527 50%,
+    #ab1010 60%,
+    #400ba4 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* Styling for the paragraph description */
+.Description {
+  font-size: 0.9rem;
+  font-family: "Arial", sans-serif;
+  color: #666;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto; /* Center the description text */
+}
+
+/* Styling for the button bar */
+.Button-bar {
+  display: flex; /* Use flexbox for better alignment and spacing */
+  justify-content: center; /* Align buttons to the left (or use center for centered alignment) */
+  gap: 15px; /* Space between buttons */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 6px; /* Rounded corners for better appearance */
+  padding: 10px; /* Add padding inside the button bar */
+  background-color: #f9f9f9; /* Subtle background color */
+  max-width: 420px;
+  margin: 10px auto;
+}
+
+/* Styling for the buttons */
+.Category-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: "Arial", sans-serif;
+  color: white;
+  background-color: #6d04e4;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.Category-button:hover {
+  background-color: #7937e2ef;
+}
+
+.Category-button.active {
+  background-color: #8f37c2; /* Green for the active button */
+  transform: scale(1.05); /* Slightly enlarge the active button */
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+/* Container Styles */
+.Projects-container1 {
+  background: unset;
+  padding: 60px 40px; /* Balanced padding for better alignment */
+  min-height: 100vh;
+  gap: 20px; /* Space between heading and grid */
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box; /* Consistent padding calculation */
+}
+
+/* Project Grid */
+.Projects-grid1 {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Professional column scaling */
+  gap: 20px; /* Ample space between cards for clarity */
+  width: 100%;
+  z-index: 1;
+  height: auto; /* Allow the grid to grow with content */
+  margin: 0 auto; /* Center grid within the container */
+  max-width: 1200px; /* Limit max width for a centered layout */
+}
+
+/* Card Styling */
+.Project-card1 {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px; /* Slightly larger corner radius for a modern look */
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for a professional look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Ensure cards adapt to their grid column */
+  max-width: 100%; /* Remove hard constraints for flexibility */
+  height: 500px;
+  padding: 20px; /* Add padding inside the card for spacing */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+  border: 1px solid #630dd3;
+}
+
+/* Hover Effects for Cards */
+.Project-card1:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Refined hover shadow */
+}
+
+/* Image Styling */
+.Project-image1 {
+  width: 100%; /* Full card width */
+  height: 200px; /* Consistent image height */
+  object-fit: cover;
+  border-radius: 6px;
+  filter: brightness(55%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.Project-card1:hover .Project-image1 {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  filter: brightness(100%);
+}
+
+/* Text Section */
+.Project-details1 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff; /* Keep text background clean */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.Project-title1 {
+  font-size: 1.8rem;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 550;
+  font-style: normal;
+  color: #000000;
+  margin-bottom: 10px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for elegance */
+  margin-top: 0 auto;
+}
+
+.Project-description1 {
+  font-size: 1.05rem;
+  font-weight: 550;
+  line-height: 1.6;
+  color: #333333; /* Softer black for readability */
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+.Project-button1 {
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(to right, #630dd3, #010208);
+  border: none;
+  border-radius: 8px; /* Slightly rounded for a modern feel */
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.Project-button1:hover {
+  background: linear-gradient(
+    to right,
+    #010208,
+    #630dd3
+  ); /* Reverse gradient */
+  transform: scale(1.05); /* Refined hover effect */
+}
+/* Responsive styles specifically for all screens */
+
+@media screen and (max-width: 768px) {
+  .Heading-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+  }
+  /* Background Div */
+  .Projects-bg1 {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+    filter: blur(150px);
+    z-index: -1; /* Behind the heading */
+    top: 20%; /* Center the background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  .Description {
+    font-size: 0.8rem;
+    font-family: "Arial", sans-serif;
+    color: #666;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .Heading-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+  }
+  /* Background Div */
+  .Projects-bg1 {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+    filter: blur(150px);
+    z-index: -1; /* Behind the heading */
+    top: 20%; /* Center the background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  .Description {
+    font-size: 0.8rem;
+    font-family: "Arial", sans-serif;
+    color: #666;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .Button-bar {
+    gap: 12px;
+    margin: 10px 4px;
+  }
+  .Category-button {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+  /* Container Adjustments */
+  .Projects-container1 {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+  /* Grid Adjustments */
+  .Projects-grid1 {
+    gap: 20px;
+  }
+  /* Card Adjustments */
+  .Project-card1 {
+    border-radius: 10px;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+    padding: 0;
+  }
+  /* Hover Effects for Cards */
+  .Project-card1:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Refined hover shadow */
+  }
+  /* Image Styling */
+  .Project-image1 {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    border-radius: 0;
+  }
+
+  /* Text Section */
+  .Project-details1 {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title1 {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button1 {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+    width: 280px;
+    border-radius: 4px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .Heading-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+  }
+  /* Background Div */
+  .Projects-bg1 {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+    filter: blur(150px);
+    z-index: -1; /* Behind the heading */
+    top: 20%; /* Center the background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  .Description {
+    font-size: 0.8rem;
+    font-family: "Arial", sans-serif;
+    color: #666;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .Button-bar {
+    gap: 12px;
+    margin: 10px 4px;
+  }
+  .Category-button {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+  /* Container Adjustments */
+  .Projects-container1 {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+  /* Grid Adjustments */
+  .Projects-grid1 {
+    gap: 20px;
+  }
+  /* Card Adjustments */
+  .Project-card1 {
+    border-radius: 10px;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+    padding: 0;
+  }
+  /* Hover Effects for Cards */
+  .Project-card1:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Refined hover shadow */
+  }
+  /* Image Styling */
+  .Project-image1 {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    border-radius: 0;
+  }
+
+  /* Text Section */
+  .Project-details1 {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title1 {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button1 {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+    width: 280px;
+    border-radius: 4px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .Heading-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+  }
+  /* Background Div */
+  .Projects-bg1 {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+    filter: blur(150px);
+    z-index: -1; /* Behind the heading */
+    top: 20%; /* Center the background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  .Description {
+    font-size: 0.8rem;
+    font-family: "Arial", sans-serif;
+    color: #666;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .Button-bar {
+    gap: 12px;
+    margin: 10px 4px;
+  }
+  .Category-button {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+  /* Container Adjustments */
+  .Projects-container1 {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+  /* Grid Adjustments */
+  .Projects-grid1 {
+    gap: 20px;
+  }
+  /* Card Adjustments */
+  .Project-card1 {
+    border-radius: 10px;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+    padding: 0;
+  }
+  /* Hover Effects for Cards */
+  .Project-card1:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Refined hover shadow */
+  }
+  /* Image Styling */
+  .Project-image1 {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    border-radius: 0;
+  }
+
+  /* Text Section */
+  .Project-details1 {
+    width: 100%; /* Full width */
+    padding: 20px;
+  }
+
+  .Project-title1 {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button1 {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+    width: 280px;
+    border-radius: 4px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Heading-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 2px;
+  }
+  /* Background Div */
+  .Projects-bg1 {
+    position: absolute;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(90deg, rgb(17, 35, 105), rgb(7, 83, 96));
+    filter: blur(150px);
+    z-index: -1; /* Behind the heading */
+    top: 20%; /* Center the background */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  .Description {
+    font-size: 0.8rem;
+    font-family: "Arial", sans-serif;
+    color: #666;
+    line-height: 1.5;
+    max-width: 260px;
+  }
+  .Button-bar {
+    gap: 12px;
+    margin: 10px 4px;
+  }
+  .Category-button {
+    padding: 12px 14px;
+    font-size: 0.7rem;
+  }
+  /* Container Adjustments */
+  .Projects-container1 {
+    padding: 30px 10px;
+    gap: 15px;
+  }
+  /* Grid Adjustments */
+  .Projects-grid1 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  /* Card Adjustments */
+  .Project-card1 {
+    border-radius: 10px;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height to content */
+    padding: 0;
+  }
+  /* Hover Effects for Cards */
+  .Project-card1:hover {
+    transform: translateY(-8px); /* Slight lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Refined hover shadow */
+  }
+  /* Image Styling */
+  .Project-image1 {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for images */
+    border-radius: 0;
+  }
+
+  /* Text Section */
+  .Project-details1 {
+    width: 100%; /* Full width */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .Project-title1 {
+    font-size: 1.5rem; /* Smaller title */
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+  .Project-description1 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-left: 10px;
+  }
+
+  /* Button Styling */
+  .Project-button1 {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin: 10px;
+    width: 280px;
+    border-radius: 4px;
+    margin: 6px;
+    width: 250px;
+  }
+}
