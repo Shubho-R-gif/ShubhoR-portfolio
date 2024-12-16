@@ -8,26 +8,26 @@ const About = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      document.querySelectorAll('.banner img').forEach((img, index) => {
+      document.querySelectorAll(".banner img").forEach((img, index) => {
         const speed = index * 0.2; // Adjust the speed for each layer
         img.style.transform = `translateY(${scrollPosition * speed}px)`;
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []); 
+  }, []);
   return (
     <main>
       <section className="parallax-effect">
         <div className="banner">
-          <img src={top1} alt="img-top1" />
-          <img src={top2} alt="img-top2" />
+          <img src={top1} alt="Top section decoration 1" loading="eager" />
+          <img src={top2} alt="Top section decoration 2" loading="eager" />
           <h1>My journey</h1>
-          <img src={center} alt="img-center" />
-          <img src={bottom} alt="img-bottom" />
+          <img src={center} alt="Center section decoration" loading="eager" />
+          <img src={bottom} alt="Bottom section decoration" loading="eager" />
         </div>
       </section>
       <aside className="journey-container">

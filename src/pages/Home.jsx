@@ -173,8 +173,8 @@ const Home = ({ isDarkMode }) => {
   return (
     <main className="Home-main">
       <figure>
-        <img className="player" src={player} alt="player.Gif" />
-        <img className="enemy" src={enemy} alt="enemy.Gif" />
+        <img className="player" src={player} alt="player.Gif" loading="eager" />
+        <img className="enemy" src={enemy} alt="enemy.Gif" loading="eager" />
       </figure>
       <article className="intro-container">
         <p className="intro-text">
