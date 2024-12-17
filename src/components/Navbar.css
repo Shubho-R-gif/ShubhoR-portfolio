@@ -551,36 +551,35 @@ ul li:nth-child(4) a {
   nav img {
     top: 10%;
     left: 1%;
-    width: 50px;
+    width: 45px;
     height: 50px;
   }
   nav span {
     width: 75px;
     top: 14%;
-    left: 17%;
+    left: 54px;
     font-size: 14px;
     padding: 2px 2px;
   }
   .darkmode-btn {
     width: 40px;
-    left: 39%;
+    left: 132px;
     transform: translateY(12px);
     font-size: 12px;
     padding: 0px;
     line-height: 0px;
   }
   .top-left {
-    top: -2px;
+    top: -4px;
     font-size: 8px;
-    left: 20px;
+    left: 15px;
   }
 
   .top-right {
-    top: 5px;
-    left: 27px;
+    top: 3px;
+    left: 22px;
     font-size: 10px;
   }
-
   .sun {
     position: absolute;
     top: 0;
@@ -591,8 +590,8 @@ ul li:nth-child(4) a {
     animation: rotation 5s linear infinite;
   }
   nav ul {
-    max-width: 133px;
-    transform: translateX(127%);
+    max-width: 172px;
+    transform: translateX(94%);
   }
 
   nav ul li:nth-child(1) {
@@ -614,7 +613,14 @@ ul li:nth-child(4) a {
     border-radius: 50%;
     padding: 10px 10px;
   }
-  nav ul li:nth-child(2),
+  nav ul li:nth-child(2) {
+    font-size: 12px;
+    padding: 3px 9px;
+    margin-top: 0px;
+    margin-bottom: -4px;
+    letter-spacing: 1px;
+  }
+
   nav ul li:nth-child(3),
   nav ul li:nth-child(4) {
     font-size: 12px;

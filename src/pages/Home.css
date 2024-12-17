@@ -1,7 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Cutive Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cutivemono/v21/m8JWjfRfY7WVjVi2E-K9H6RCTm4.woff2)
+    format("woff2");
+}
 
+@font-face {
+  font-family: "Delius Swash Caps";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/deliusswashcaps/v23/oY1E8fPLr7v4JWCExZpWebxVKORpXUeaIGY.woff2)
+    format("woff2");
+}
 /*article-classes*/
 /* Container for the Article Section */
 .intro-container {

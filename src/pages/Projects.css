@@ -1,6 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Iceland&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Itim&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Cutive+Mono&family=Delius+Swash+Caps&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Oranienbaum&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Cutive Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cutivemono/v21/m8JWjfRfY7WVjVi2E-K9H6RCTm4.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Iceland";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/iceland/v20/rax9HiuFsdMNOnWPaKtMAQ.woff2)
+    format("woff2");
+}
 /* General styles for the main container */
 .Projects-main {
   width: 100%;

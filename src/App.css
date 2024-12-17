@@ -1,11 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@font-face {
+  font-family: 'Handjet';
+  font-style: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/handjet/v19/oY108eXHq7n1OnbQrOY_2FrEwYEMLlcdP1mCtZaLaTutCwcIhGZemE3F.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: "Cutive Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cutivemono/v21/m8JWjfRfY7WVjVi2E-K9H6RCTm4.woff2)
+    format("woff2");
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: "Handjet", serif;
-/*   font-size: 22px; */
   font-optical-sizing: auto;
   overflow-x: hidden;
   box-sizing: border-box;
