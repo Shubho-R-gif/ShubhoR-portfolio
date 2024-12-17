@@ -14,7 +14,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
       }}
     >
       <nav>
-        <img src={profile} alt="My-profile" />
+        <img src={profile} alt="My-profile" loading="eager" />
         <span
           style={{
             color: isDarkMode
