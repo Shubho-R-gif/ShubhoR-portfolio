@@ -20,7 +20,7 @@ Welcome to my personal portfolio website! This project showcases my skills as a 
 
 - **Responsive Design**: The site is fully responsive and works on all devices, including desktops, tablets, and smartphones.
 - **Interactive UI**: Built using React, it provides a smooth and interactive user experience.
-- **Dynamic Content**: Blog posts are dynamically fetched from a backend (or mock data) and displayed on the site.
+- **Dynamic Content**: Blog posts are dynamically fetched from an array of objects in the frontend, enabling dynamic routes and efficient content display.
 - **Custom Animations**: Subtle animations enhance the user experience, making the interface lively and interactive.
 - **Dark Mode Support**: Option for users to toggle between light and dark themes for accessibility and comfort.
 
