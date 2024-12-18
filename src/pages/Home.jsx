@@ -115,7 +115,7 @@ const Home = ({ isDarkMode }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
+      { threshold: 0.4 } // Trigger when 50% of the element is in view
     );
 
     if (textRef.current) observer.observe(textRef.current);
