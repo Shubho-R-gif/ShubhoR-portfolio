@@ -593,7 +593,7 @@ ul li:nth-child(4) a {
   }
   nav ul {
     max-width: 172px;
-    transform: translateX(94%);
+    transform: translateX(93%);
   }
 
   nav ul li:nth-child(1) {
@@ -617,19 +617,21 @@ ul li:nth-child(4) a {
   }
   nav ul li:nth-child(2) {
     font-size: 12px;
-    padding: 3px 9px;
+    padding: 7px 9px;
     margin-top: 0px;
-    margin-bottom: -4px;
+    margin-bottom: -8px;
     letter-spacing: 1px;
+    transform: translateY(-4px);
   }
 
   nav ul li:nth-child(3),
   nav ul li:nth-child(4) {
     font-size: 12px;
-    padding: 3px;
-    margin-top: 0px;
-    margin-bottom: -4px;
-    letter-spacing: 1px;
+        padding: 7px;
+        margin-top: 0px;
+        margin-bottom: -8px;
+        letter-spacing: 0px;
+        transform: translateY(-4px);
   }
 } /* 16.3 cm screen 6.4inch  large */
 @media screen and (max-width: 320px) {

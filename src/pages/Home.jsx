@@ -58,9 +58,9 @@ const Home = ({ isDarkMode }) => {
       id: 4,
       name: "React",
       icon: faReact,
-      level: "Intermediate",
+      level: "Basic",
       description:
-        "Highly proficient in React, focusing on building reusable components and managing application state effectively. I am familiar with hooks, React Router, and performance optimization techniques. My projects involve working with RESTful APIs and integrating React with modern tools like Redux for seamless state management.",
+       "Proficient in React basics, including core features like useState, useRef, and useEffect for state management and component behavior. Familiar with React Router for handling client-side routing and building single-page applications. Focused on creating functional components and eager to expand knowledge in advanced React concepts.",
       color: "#61dafb",
     },
   ];

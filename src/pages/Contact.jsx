@@ -1,8 +1,18 @@
 import "./Contact.css";
-const Contact = () => {
+import PropTypes from "prop-types"; // Import PropTypes
+const Contact = ({ isDarkMode }) => {
   return (
     <div className="contact-container">
-      <h2 className="contact-container__title">Contact me</h2>
+      <h2
+        className="contact-container__title"
+        style={{
+          color: isDarkMode
+            ? "rgb(253, 250, 250)"
+            : " rgba(0, 0, 0, 0.94)",
+        }}
+      >
+        Contact me
+      </h2>
       <div className="contact-cards">
         <div className="contact-card">
           <i
@@ -77,5 +87,8 @@ const Contact = () => {
     </div>
   );
 };
-
+// PropTypes validation
+Contact.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};
 export default Contact;
