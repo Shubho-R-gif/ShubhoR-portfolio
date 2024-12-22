@@ -54,14 +54,16 @@
   margin-top: 100px;
   margin-bottom: 6px;
   background: linear-gradient(
-    90deg,
+    to left,
     #1705be 0%,
-    #ae0527 50%,
+    #ae0521 50%,
     #ab1010 60%,
     #400ba4 100%
   );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-size: 300% 300%;
+  animation: gradientBackg 4s ease infinite;
 }
 
 /* Styling for the paragraph description */
