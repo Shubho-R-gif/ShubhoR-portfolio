@@ -7,6 +7,7 @@ import photoEditorImage from "/ProjectsImg/photo-editor.jpeg";
 import calculatorImage from "/ProjectsImg/Calculator.jpeg";
 import imageSlider from "/ProjectsImg/image slider.jpeg";
 import reactCalculator from "/ProjectsImg/image-calc.jpeg";
+import todoList from "/ProjectsImg/To-doList.jpeg";
 import "./Projects.css";
 
 const Projects = () => {
@@ -25,7 +26,7 @@ const Projects = () => {
     {
       title: "Snake Game",
       description:
-        "A classic arcade-style snake game. Test your reflexes by controlling the snake, eating the food, and growing longer while avoiding obstacles and yourself!",
+        "A classic arcade-style snake game.npm controlling the snake, eating the food, and growing longer while avoiding obstacles and yourself!",
       img: snakeGameImage,
       category: "JavaScript",
       link: "https://github.com/Shubho-R-gif/Snake-game.git",
@@ -78,7 +79,17 @@ const Projects = () => {
         "A carousel slide project involves creating a simple sliding mechanism to display content or images sequentially, moving horizontally.",
       img: imageSlider,
       category: "HTML,CSS",
-      link: "https://example.com",
+      link: "https://github.com/Shubho-R-gif/-carousel-slide-.git",
+      countdown: 60, // Initial countdown for this project
+      timerStart: false, // Timer state for this project
+    },
+    {
+      title: "To-Do List",
+      description:
+        "A simple and user-friendly To-Do List application built with react. This app allows users to efficiently manage tasks by adding, deleting, and storing items using localStorage for persistent data.",
+      img: todoList,
+      category: "React",
+      link: "https://github.com/Shubho-R-gif/To-do-list-in-react.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
     },

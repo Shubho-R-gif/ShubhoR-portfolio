@@ -330,9 +330,10 @@ figure .enemy {
 
 .Skill-description {
   margin: 0.8rem 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 450;
   line-height: 1.2;
-  color: #eee5e59d;
+  color: #ffffffc9;
 }
 
 .Skill-level {
