@@ -13,13 +13,30 @@
       content="Shubho R, React Developer, Web Development, Responsive Websites, Frontend Development"
     />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://shubhorwebdev.com" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Shubho R | React Developer Portfolio" />
+    <meta property="og:description" content="Building responsive, modern websites with React and CSS." />
+    <meta property="og:image" content="https://shubhorwebdev.com/og-image.png" />
+    <meta property="og:url" content="https://shubhorwebdev.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shubho R | React Developer Portfolio" />
+    <meta name="twitter:description" content="Building responsive, modern websites with React and CSS." />
+    <meta name="twitter:image" content="https://shubhorwebdev.com/twitter-image.png" />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" alt="Site Icon" loading="lazy" />
     <link rel="apple-touch-icon" href="/favicon-32x32.png" />
 
     <!-- Preloading critical resources -->
     <link rel="preload" href="/favicon-32x32.png" as="image" />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
     <!-- Font Awesome -->
     <link
@@ -37,6 +54,9 @@
       <p>Please enable JavaScript to view this website properly.</p>
     </noscript>
 
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Main Script -->
+    <script type="module" src="/src/main.jsx?v=1.0.0"></script>
+    <!-- Fallback for older browsers -->
+    <script nomodule src="/src/main-legacy.js"></script>
   </body>
 </html>
