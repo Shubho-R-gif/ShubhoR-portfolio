@@ -2,6 +2,9 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "shubhorwebdev.com" }
+      ],
       "destination": "https://shubhorwebdev.com/$1",
       "permanent": true
     }
