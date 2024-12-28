@@ -1,10 +1,11 @@
+import PropTypes from "prop-types"; // Import PropTypes
 import profile from "../assets/profile2.jpg";
 import "./Resume.css";
-const Resume = () => {
+const Resume = ({ isDarkMode }) => {
   const details = [
     {
       img: profile, // Replace with the correct image path
-      name: "Shubho Halder",
+      name: "Subho Halder",
       title: "Front-End Developer - UI/UX Designer", // Add your title here
       location: "Delhi, India", // Update your location
       email: "subhor.workwith@gmail.com", // Replace with your email
@@ -17,30 +18,28 @@ const Resume = () => {
       text: "Motivated and detail-oriented Frontend Developer with 1 year of professional experience in building responsive and dynamic web applications using React.js. Strong knowledge of modern JavaScript, front-end libraries, and UI/UX principles. Passionate about crafting user-friendly interfaces and improving web performance.",
     },
   ];
-  const experience = [
-    {
-      company: "Company Name",
-      role: "Your Role",
-      period: "Jan 2020 - Dec 2023",
-      description:
-        "A brief description of your responsibilities and achievements in this role.",
-    },
-  ];
   const skills = [
     {
-      skill: "JavaScript",
-      level: "Advanced",
+      skill: ["Programming Languages: ", "JavaScript (ES6+)"],
     },
     {
-      skill: "React",
-      level: "Intermediate",
+      skill: ["Frontend&Technologies: ", "React.js,", " Redux"],
+    },
+    {
+      skill: ["WebDesign:", " HTML5,", " CSS3,", " Bootstrap"],
+    },
+    {
+      skill: ["ToolsAndPlatforms:", " Git-Hub,", " Vite"],
+    },
+    {
+      skill: ["Others:", " Photoshop"],
     },
   ];
   const education = [
     {
-      degree: "Bachelor's in Computer Science",
-      institution: "University Name",
-      year: "2016 - 2020",
+      degree: "Bachelor's in Arts:",
+      institution: "Zakir hussain college",
+      year: "2021 - 2024",
     },
   ];
   const languages = [
@@ -49,8 +48,12 @@ const Resume = () => {
       proficiency: "Fluent",
     },
     {
-      language: "Spanish",
-      proficiency: "Intermediate",
+      language: "Hindi",
+      proficiency: "Fluent",
+    },
+    {
+      language: "Bengali",
+      proficiency: "Fluent",
     },
   ];
 
@@ -107,42 +110,67 @@ const Resume = () => {
       ))}
 
       {/* Summary Section */}
-        <section className="summary">
+      <section className="summary">
+        <h2
+          style={{
+            color: isDarkMode ? "rgb(255, 249, 249)" : " rgba(0, 0, 0, 0.94)",
+          }}
+        >
+          Summary:
+        </h2>
         {summary.map((summ, index) => (
-          <p key={index}>{summ.text}</p>
-        ))}
-      </section>
-
-      {/* Experience Section */}
-           <section className="experience">
-        {experience.map((exp, index) => (
-          <div key={index}>
-            <h4>
-              {exp.role} - {exp.company}
-            </h4>
-            <p>{exp.period}</p>
-            <p>{exp.description}</p>
-          </div>
+          <p
+            style={{
+              color: isDarkMode ? "rgb(180, 161, 255)" : "rgb(67, 8, 143)",
+            }}
+            key={index}
+          >
+            {summ.text}
+          </p>
         ))}
       </section>
 
       {/* Skills Section */}
       <section className="skills">
         <ul>
+          <h2
+            style={{
+              color: isDarkMode ? "rgb(255, 249, 249)" : " rgba(0, 0, 0, 0.94)",
+            }}
+          >
+            Skills & Expertise:
+          </h2>
           {skills.map((skill, index) => (
-            <li key={index}>
-              {skill.skill} ({skill.level})
+            <li
+              style={{
+                color: isDarkMode ? "rgb(180, 161, 255)" : "rgb(67, 8, 143)",
+              }}
+              key={index}
+            >
+              {skill.skill}
             </li>
           ))}
         </ul>
       </section>
 
       {/* Education Section */}
-         <section className="education">
+      <section className="education">
         {education.map((edu, index) => (
           <div key={index}>
-            <h4>{edu.degree}</h4>
-            <p>
+            <h4
+              style={{
+                color: isDarkMode
+                  ? "rgb(255, 249, 249)"
+                  : " rgba(0, 0, 0, 0.94)",
+              }}
+            >
+              {edu.degree}
+            </h4>
+            <p
+              style={{
+                color: isDarkMode ? "rgb(180, 161, 255)" : "rgb(67, 8, 143)",
+              }}
+            >
               {edu.institution} ({edu.year})
             </p>
           </div>
@@ -150,9 +178,21 @@ const Resume = () => {
       </section>
 
       {/* Languages Section */}
-         <section className="languages">
+      <section className="languages">
+        <h1
+          style={{
+            color: isDarkMode ? "rgb(255, 249, 249)" : " rgba(0, 0, 0, 0.94)",
+          }}
+        >
+          Languages:
+        </h1>
         {languages.map((lang, index) => (
-          <p key={index}>
+          <p
+            style={{
+              color: isDarkMode ? "rgb(180, 161, 255)" : "rgb(67, 8, 143)",
+            }}
+            key={index}
+          >
             {lang.language}: {lang.proficiency}
           </p>
         ))}
@@ -160,5 +200,8 @@ const Resume = () => {
     </div>
   );
 };
-
+// PropTypes validation
+Resume.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+};
 export default Resume;
