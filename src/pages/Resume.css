@@ -1,0 +1,297 @@
+/* Resume Container */
+.resume {
+    position: relative; /* Add relative positioning to ensure proper z-index stacking */
+    max-width: 900px;
+    margin: 100px auto;
+    background: #00000035;
+    border-radius: 6px;
+    box-shadow: 0 0px 4px rgba(255, 255, 255, 0.183);
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 500;
+    font-style: normal;
+    height: auto; /* Set to auto for better responsiveness */
+    z-index: 1;
+    backdrop-filter: blur(10px);
+  }
+  /* Background Div */
+  .resume-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 390px;
+    z-index: -1; /* Behind the heading */
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent 0 29px,
+        /* Decreased to make more lines */ rgba(172, 172, 172, 0.141) 29px 30px
+          /* Decreased to match */
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0 29px,
+        /* Decreased to make more lines */ rgba(172, 172, 172, 0.09) 29px 30px
+          /* Decreased to match */
+      );
+    background-size: 150px 150px; /* Control the size of the lines */
+    background-repeat: repeat; /* Ensure it repeats across the container */
+  }
+  .resume-bg1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50% -50%);
+    width: 900px;
+    height: 150px;
+    background-image: linear-gradient(90deg, rgb(63, 39, 170), rgb(146, 15, 198));
+    filter: blur(40px); /* Apply blur effect */
+    z-index: -2; /* Behind the heading */
+    border-radius: 6px;
+  }
+  
+  /* Profile Section */
+  .resume figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    margin: 0px;
+  }
+  
+  .resume img {
+    width: 115px;
+    height: 150px;
+    border-radius: 4%;
+    border: 2px solid #470ba2;
+    margin-bottom: 0px;
+    margin-top: 30px;
+  }
+  
+  /* .resume figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border: 1px solid white;
+  } */
+  .resume h1 {
+    font-size: 4rem;
+    font-family: "Iceland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0px;
+  }
+  
+  .resume h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 7px;
+  }
+  
+  .resume p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+  }
+  /* Links Section */
+  .links-section {
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content vertically */
+    flex-wrap: wrap; /* Allow items to wrap in smaller screens */
+  }
+  .links-section p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 10px; /* Add space between text and links */
+    display: inline-flex; /* Keep the text next to the links */
+    align-items: center; /* Vertically center the text */
+  }
+  
+  .links-section a {
+    display: inline-block; /* Inline block to treat like buttons */
+    width: 200px; /* Adjust size to match button size */
+    height: 50px;
+    line-height: 50px; /* Vertically center the text */
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    background: #111; /* Dark background */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px; /* Rounded corners */
+    margin: 13px; /* Space between buttons */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .links-section a:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite; /* Glowing animation */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+    border-radius: 10px;
+  }
+  
+  .links-section a:hover:before {
+    opacity: 1; /* Show glow on hover */
+  }
+  
+  .links-section a:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111; /* Same background color as the button */
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  /* General Section Styling */
+  .resume section {
+    padding: 20px 30px; /* Spacing within each section */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Subtle divider between sections */
+  }
+  
+  .resume section:last-child {
+    border-bottom: none; /* Remove border for the last section */
+  }
+  
+  /* Text Styling for Each Section */
+  .resume h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  
+  .resume p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  
+  /* List Styling for Skills */
+  .resume .skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Wrap skills for smaller screens */
+  }
+  
+  .resume .skills li {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  /* Summary Section */
+  .summary {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  /* Experience Section */
+  .experience div {
+    margin-bottom: 20px; /* Space between each experience entry */
+  }
+  
+  .experience h4 {
+    font-size: 1.4rem;
+    color: #ffdd57;
+    margin-bottom: 5px;
+  }
+  
+  /* Education Section */
+  .education div {
+    margin-bottom: 20px; /* Space between each education entry */
+  }
+  
+  .education h4 {
+    font-size: 1.4rem;
+    color: #78d1e1;
+    margin-bottom: 5px;
+  }
+  
+  /* Languages Section */
+  .languages p {
+    font-size: 1rem;
+    color: #b4a1ff;
+    margin: 8px 0;
+  }
+  
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .resume {
+      padding: 15px;
+    }
+  
+    .resume figure {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .resume img {
+      width: 100px;
+      height: 100px;
+      margin-right: 15px;
+    }
+  
+    .resume h1 {
+      font-size: 1.8rem;
+    }
+  
+    .resume h3 {
+      font-size: 1rem;
+    }
+  
+    .description p {
+      font-size: 1rem;
+    }
+  }
+  

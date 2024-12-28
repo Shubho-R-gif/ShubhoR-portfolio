@@ -165,11 +165,11 @@ const Home = ({ isDarkMode }) => {
       )
     );
   };
-  //Handle resume click after re-direct resume page
+/*   //Handle resume click after re-direct resume page
   const handleResumeClick = () => {
     // Open the PDF in a new tab
     window.open(resume, "_blank");
-  };
+  }; */
   return (
     <main className="Home-main">
       <figure>
@@ -208,9 +208,8 @@ const Home = ({ isDarkMode }) => {
         <button
           type="button"
           className="resume-button"
-          onClick={handleResumeClick}
         >
-          Resume
+          <Link to="/resume">Resume</Link>
         </button>
       </article>
       <hr />
