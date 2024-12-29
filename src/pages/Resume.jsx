@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"; // Import PropTypes
-import profile from "../assets/profile2.jpg";
+import profile from "../assets/profile3.jpg";
 import "./Resume.css";
 const Resume = ({ isDarkMode }) => {
   const details = [
