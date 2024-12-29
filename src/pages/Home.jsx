@@ -17,10 +17,10 @@ import "./Home.css";
 import weatherAppImage from "/ProjectsImg/weather-app.jpeg";
 import snakeGameImage from "/ProjectsImg/snake-game.jpeg";
 import colorPaletteImage from "/ProjectsImg/color-palette-generator.png";
-import photoEditorImage from "/ProjectsImg/photo-editor.jpeg";
+import expenseTracker from "/ProjectsImg/expense-tracker.jpeg";
 
 //Import resume from assests folder
-import resume from "../assets/resume.pdf";
+
 const Home = ({ isDarkMode }) => {
   const [textIndex, setTextIndex] = useState(0); // Manage the title switching index
   const [isVisible, setIsVisible] = useState(false); // Track visibility for scroll animation
@@ -60,7 +60,7 @@ const Home = ({ isDarkMode }) => {
       icon: faReact,
       level: "Basic",
       description:
-       "Proficient in React basics, including core features like useState, useRef, and useEffect for state management and component behavior. Familiar with React Router for handling client-side routing and building single-page applications. Focused on creating functional components and eager to expand knowledge in advanced React concepts.",
+        "Proficient in React basics, including core features like useState, useRef, and useEffect for state management and component behavior. Familiar with React Router for handling client-side routing and building single-page applications. Focused on creating functional components and eager to expand knowledge in advanced React concepts.",
       color: "#61dafb",
     },
   ];
@@ -93,11 +93,11 @@ const Home = ({ isDarkMode }) => {
       timerStart: false, // Timer state for this project
     },
     {
-      title: "Photo Editor",
+      title: "ExpenseTracker",
       description:
-        "A user-friendly photo editing app that allows you to adjust brightness, apply filters, and more. Perfect for quick edits and enhancing your images on the go.",
-      img: photoEditorImage,
-      link: "https://example.com",
+        "An Expense Tracker application built with React to help you manage your income and expenses effectively. This simple yet functional app allows users to input their income, track expenses like groceries, and view a transaction history.",
+      img: expenseTracker,
+      link: "https://github.com/Shubho-R-gif/Expense-tracker.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
     },
@@ -165,11 +165,7 @@ const Home = ({ isDarkMode }) => {
       )
     );
   };
-/*   //Handle resume click after re-direct resume page
-  const handleResumeClick = () => {
-    // Open the PDF in a new tab
-    window.open(resume, "_blank");
-  }; */
+
   return (
     <main className="Home-main">
       <figure>
@@ -205,10 +201,7 @@ const Home = ({ isDarkMode }) => {
             Let&apos;s connect and make something amazing together!
           </Link>
         </h2>
-        <button
-          type="button"
-          className="resume-button"
-        >
+        <button type="button" className="resume-button">
           <Link to="/resume">Resume</Link>
         </button>
       </article>

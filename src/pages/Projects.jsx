@@ -8,6 +8,7 @@ import calculatorImage from "/ProjectsImg/Calculator.jpeg";
 import imageSlider from "/ProjectsImg/image slider.jpeg";
 import reactCalculator from "/ProjectsImg/image-calc.jpeg";
 import todoList from "/ProjectsImg/To-doList.jpeg";
+import expenseTracker from "/ProjectsImg/expense-tracker.jpeg";
 import "./Projects.css";
 
 const Projects = () => {
@@ -90,6 +91,15 @@ const Projects = () => {
       img: todoList,
       category: "React",
       link: "https://github.com/Shubho-R-gif/To-do-list-in-react.git",
+      countdown: 60, // Initial countdown for this project
+      timerStart: false, // Timer state for this project
+    },
+    {
+      title: "ExpenseTracker",
+      description:
+        "A React-based Expense Tracker app to help users manage income and track expenses like groceries. It provides a simple interface to input transactions and view a detailed transaction history.",
+      img: expenseTracker,
+      link: "https://github.com/Shubho-R-gif/Expense-tracker.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
     },
