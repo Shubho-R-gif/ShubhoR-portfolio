@@ -235,13 +235,21 @@
   margin-bottom: 15px;
   background: unset;
 }
-
-.education h4 {
+.education span {
   font-size: 2rem;
-  margin: 0;
-  margin-bottom: 20px;
+  font-weight: 600;
+  color: #b4a1ff;
   font-family: "Courier New", Courier, monospace;
   font-weight: 500;
+  font-style: normal;
+}
+
+.education h4 {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
   font-style: normal;
 }
 .education p {

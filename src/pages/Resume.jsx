@@ -37,7 +37,7 @@ const Resume = ({ isDarkMode }) => {
   ];
   const education = [
     {
-      degree: "Bachelor's in Arts:",
+      degree: "Bachelor's in Arts",
       institution: "Zakir hussain college",
       year: "2021 - 2024",
     },
@@ -157,11 +157,18 @@ const Resume = ({ isDarkMode }) => {
       <section className="education">
         {education.map((edu, index) => (
           <div key={index}>
-            <h4
+            <span
               style={{
                 color: isDarkMode
                   ? "rgb(255, 249, 249)"
                   : " rgba(0, 0, 0, 0.94)",
+              }}
+            >
+              Education:
+            </span>
+            <h4
+              style={{
+                color: isDarkMode ? "rgb(180, 161, 255)" : "rgb(67, 8, 143)",
               }}
             >
               {edu.degree}
