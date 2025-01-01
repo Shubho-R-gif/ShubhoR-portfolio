@@ -9,6 +9,7 @@ import imageSlider from "/ProjectsImg/image slider.jpeg";
 import reactCalculator from "/ProjectsImg/image-calc.jpeg";
 import todoList from "/ProjectsImg/To-doList.jpeg";
 import expenseTracker from "/ProjectsImg/expense-tracker.jpeg";
+import currencyConverter from "/ProjectsImg/Currencyconverter.jpeg";
 import "./Projects.css";
 
 const Projects = () => {
@@ -75,7 +76,7 @@ const Projects = () => {
       timerStart: false, // Timer state for this project
     },
     {
-      title: "Image slider",
+      title: "Image Slider",
       description:
         "A carousel slide project involves creating a simple sliding mechanism to display content or images sequentially, moving horizontally.",
       img: imageSlider,
@@ -100,6 +101,15 @@ const Projects = () => {
         "A React-based Expense Tracker app to help users manage income and track expenses like groceries. It provides a simple interface to input transactions and view a detailed transaction history.",
       img: expenseTracker,
       link: "https://github.com/Shubho-R-gif/Expense-tracker.git",
+      countdown: 60, // Initial countdown for this project
+      timerStart: false, // Timer state for this project
+    },
+    {
+      title: "CurrencyConverter",
+      description:
+        "A simple web-based currency converter that uses an API to fetch real-time exchange rates. Users can input an amount, select base and target currencies, and see the converted value.",
+      img: currencyConverter,
+      link: "https://github.com/Shubho-R-gif/Currency-converter.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
     },
