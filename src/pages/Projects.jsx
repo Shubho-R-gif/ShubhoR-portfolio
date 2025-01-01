@@ -100,6 +100,7 @@ const Projects = () => {
       description:
         "A React-based Expense Tracker app to help users manage income and track expenses like groceries. It provides a simple interface to input transactions and view a detailed transaction history.",
       img: expenseTracker,
+      category: "React",
       link: "https://github.com/Shubho-R-gif/Expense-tracker.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
@@ -109,6 +110,7 @@ const Projects = () => {
       description:
         "A simple web-based currency converter that uses an API to fetch real-time exchange rates. Users can input an amount, select base and target currencies, and see the converted value.",
       img: currencyConverter,
+      category: "HTML,CSS",
       link: "https://github.com/Shubho-R-gif/Currency-converter.git",
       countdown: 60, // Initial countdown for this project
       timerStart: false, // Timer state for this project
